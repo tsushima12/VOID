@@ -1,0 +1,32 @@
+import random
+
+def diabolical_calculator():
+    print("Welcome to the *Super Diabolical Mind-Reading Calculator*")
+    print("I know exactly what you're thinking mf, but I'll never tell!")
+
+    while True:
+        try:
+            num1 = float(input("\nEnter your first number: "))
+            num2 = float(input("Enter your second number: "))
+            correct_answer = num1 + num2
+      
+            evil_answer = correct_answer + random.uniform(-100, 100)
+
+            print("\nCalculating...")
+            print(f"Your answer is {evil_answer:.2f} (which is obviously better than what you thought!)")
+            
+            agree = input("\nDo you agree with this answer? (yes/no): ").lower()
+
+            if "no" in agree:
+                print("\nOh, you dare question me? Try again, foolish N!!GA !")
+            else:
+                print("\nGood! As expected, you agree with my supreme intellect.")
+        except ValueError:
+            print("\nHey, that's not a number! brooooo!")
+        
+        continue_playing = input("\nDo you want to try again? (yes/no): ").lower()
+        if continue_playing != 'yes':
+            print("You cannot escape my genius! But I'll let you go... for now.")
+            break
+
+diabolical_calculator()
